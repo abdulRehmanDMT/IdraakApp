@@ -1,12 +1,50 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
-<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:inputLayout="clr-namespace:Syncfusion.XForms.TextInputLayout;assembly=Syncfusion.Core.XForms"
-             BackgroundImageSource="bg"
-             NavigationPage.HasNavigationBar="False"
-             x:Class="IdraakApp.Views.SignUp">
+<ContentPage 
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+    xmlns:inputLayout="clr-namespace:Syncfusion.XForms.TextInputLayout;assembly=Syncfusion.Core.XForms"
+    BackgroundImageSource="bg"
+    NavigationPage.HasNavigationBar="False"
+    x:Class="IdraakApp.Views.SignUp">
+    <NavigationPage.TitleView>
+        <OnPlatform x:TypeArguments="View">
+            <On Platform="Android">
+                <StackLayout Orientation="Horizontal">
+                    <StackLayout 
+                        HorizontalOptions="StartAndExpand"
+                        VerticalOptions="CenterAndExpand"
+                        Orientation="Horizontal">
+                        <Image 
+                            VerticalOptions="Center"
+                            HeightRequest="30"
+                            Aspect="AspectFit"
+                            HorizontalOptions="Start"
+                            Source="logout.png"/>
+                    </StackLayout>
+                    <StackLayout 
+                        Margin="0,0,10,0"
+                        Spacing="10"
+                        VerticalOptions="CenterAndExpand"
+                        HorizontalOptions="EndAndExpand"
+                        Orientation="Horizontal">
+                        <Image 
+                            HeightRequest="30"
+                            Aspect="AspectFit"
+                            HorizontalOptions="EndAndExpand"
+                            Source="share.png"/>
+                        <Image 
+                            HeightRequest="30"
+                            Aspect="AspectFit"
+                            HorizontalOptions="End"
+                            Source="lang.png"/>
+                    </StackLayout>
+                </StackLayout>
+            </On>
+        </OnPlatform>
+    </NavigationPage.TitleView>
     <ContentPage.Content>
         <StackLayout Padding="10,25">
-            <Grid 
+            <!--<Grid 
                 HorizontalOptions="FillAndExpand">
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="20*"/>
@@ -48,7 +86,7 @@
                         HorizontalOptions="End"
                         Source="lang.png"/>
                 </StackLayout>
-            </Grid>
+            </Grid>-->
             <StackLayout 
                 Padding="30,0"
                 Spacing="20"
