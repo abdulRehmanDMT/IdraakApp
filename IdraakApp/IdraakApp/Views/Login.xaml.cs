@@ -43,7 +43,7 @@ namespace IdraakApp.Views
 
                 MainContainer.IsVisible = true;
 
-                lbl_CountryCode.Text = countryDetailVM.CountryCode;
+                txt_PhoneNumber.Placeholder = countryDetailVM.MobileMask;
                 MaskedBehavior.Mask = countryDetailVM.MobileMask;
             }
         }

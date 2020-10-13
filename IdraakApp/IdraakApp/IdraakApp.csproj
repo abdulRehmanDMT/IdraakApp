@@ -11,6 +11,24 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="Resources\Fonts\CairoBlack.ttf" />
+    <None Remove="Resources\Fonts\CairoBold.ttf" />
+    <None Remove="Resources\Fonts\CairoExtraLight.ttf" />
+    <None Remove="Resources\Fonts\CairoLight.ttf" />
+    <None Remove="Resources\Fonts\CairoRegular.ttf" />
+    <None Remove="Resources\Fonts\CairoSemiBold.ttf" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\Fonts\CairoBlack.ttf" />
+    <EmbeddedResource Include="Resources\Fonts\CairoBold.ttf" />
+    <EmbeddedResource Include="Resources\Fonts\CairoExtraLight.ttf" />
+    <EmbeddedResource Include="Resources\Fonts\CairoLight.ttf" />
+    <EmbeddedResource Include="Resources\Fonts\CairoRegular.ttf" />
+    <EmbeddedResource Include="Resources\Fonts\CairoSemiBold.ttf" />
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="Newtonsoft.Json" Version="12.0.3" />
     <PackageReference Include="Syncfusion.Licensing" Version="18.3.0.38" />
     <PackageReference Include="Syncfusion.Xamarin.Core" Version="18.3.0.38" />

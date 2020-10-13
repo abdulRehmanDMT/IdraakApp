@@ -70,6 +70,7 @@
                         <Label 
                             TextColor="Black"
                             FontSize="Small"
+                            FontFamily="CairoSemiBold"
                             FontAttributes="Bold"
                             Text="1"/>
                     </Frame>
@@ -81,6 +82,7 @@
                         <Label 
                             TextColor="Black"
                             FontAttributes="Bold"
+                            FontFamily="CairoSemiBold"
                             FontSize="Small"
                             Text="2"/>
                     </Frame>
@@ -91,6 +93,7 @@
                         HasShadow="False">
                         <Label 
                             FontAttributes="Bold"
+                            FontFamily="CairoSemiBold"
                             TextColor="Black"
                             FontSize="Small"
                             Text="3"/>
@@ -99,32 +102,13 @@
                 <StackLayout>
                     <Label 
                         TextColor="LightGray"
+                        FontFamily="CairoRegular"
                         Text="Enter mobile number and login"/>
                     <StackLayout 
                         Orientation="Horizontal"
                         BackgroundColor="White"
                         Spacing="10"
                         Padding="10">
-                        <Frame 
-                            Padding="15"
-                            VerticalOptions="Center"
-                            HorizontalOptions="Center"
-                            BackgroundColor="Black"
-                            CornerRadius="300"
-                            HasShadow="False"/>
-                        <BoxView 
-                            HeightRequest="10"
-                            Color="Black"
-                            WidthRequest="1"/>
-                        <Label 
-                            x:Name="lbl_CountryCode"
-                            VerticalTextAlignment="Center"
-                            TextColor="Black"
-                            FontSize="Small"/>
-                        <BoxView 
-                            HeightRequest="10"
-                            Color="Black"
-                            WidthRequest="1"/>
                         <inputLayout:SfTextInputLayout
                             ContainerBackgroundColor="White"
                             IsHintAlwaysFloated="False"
@@ -141,6 +125,7 @@
                             ContainerType="Outlined">
                             <Entry 
                                 x:Name="txt_PhoneNumber"
+                                FontFamily="CairoRegular"
                                 PlaceholderColor="Gray"
                                 Keyboard="Numeric"
                                 VerticalTextAlignment="Center"

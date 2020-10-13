@@ -74,7 +74,7 @@
                     BackgroundColor="White"
                     Spacing="10"
                     Padding="10">
-                    <Frame 
+                    <!--<Frame 
                         Padding="15"
                         VerticalOptions="Center"
                         HorizontalOptions="Center"
@@ -93,7 +93,7 @@
                     <BoxView 
                         HeightRequest="10"
                         Color="Black"
-                        WidthRequest="1"/>
+                        WidthRequest="1"/>-->
                     <inputLayout:SfTextInputLayout
                         ContainerBackgroundColor="White"
                         IsHintAlwaysFloated="False"
@@ -110,7 +110,7 @@
                         ContainerType="Outlined">
                         <Entry 
                             PlaceholderColor="Gray"
-                            Keyboard="Numeric"
+                            Keyboard="Email"
                             VerticalTextAlignment="Center"
                             VerticalOptions="FillAndExpand"
                             HorizontalTextAlignment="Center"
