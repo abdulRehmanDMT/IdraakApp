@@ -7,7 +7,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IdraakApp.Android", "Idraak
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IdraakApp.iOS", "IdraakApp\IdraakApp.iOS\IdraakApp.iOS.csproj", "{D28869E7-A4D5-4A91-AE1D-C70BF5DA65EB}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IdraakApp", "IdraakApp\IdraakApp\IdraakApp.csproj", "{2F3E50EA-2645-4A5B-B765-B6D15CE83064}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "IdraakApp", "IdraakApp\IdraakApp\IdraakApp.csproj", "{2F3E50EA-2645-4A5B-B765-B6D15CE83064}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

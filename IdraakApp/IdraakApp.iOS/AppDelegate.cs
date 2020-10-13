@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 
 using Foundation;
+using Syncfusion.XForms.iOS.MaskedEdit;
 using UIKit;
 
 namespace IdraakApp.iOS
@@ -25,6 +26,7 @@ namespace IdraakApp.iOS
             global::Xamarin.Forms.Forms.Init();
             LoadApplication(new App());
 
+            SfMaskedEditRenderer.Init();
             return base.FinishedLaunching(app, options);
         }
     }

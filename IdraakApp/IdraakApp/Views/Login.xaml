@@ -1,9 +1,11 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
-<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:inputLayout="clr-namespace:Syncfusion.XForms.TextInputLayout;assembly=Syncfusion.Core.XForms"
-             BackgroundImageSource="bg"
-             NavigationPage.HasNavigationBar="False"
-             x:Class="IdraakApp.Views.Login">
+<ContentPage 
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+    xmlns:syncmaskededit="clr-namespace:Syncfusion.XForms.MaskedEdit;assembly=Syncfusion.SfMaskedEdit.XForms" xmlns:inputLayout="clr-namespace:Syncfusion.XForms.TextInputLayout;assembly=Syncfusion.Core.XForms" xmlns:behavior="clr-namespace:IdraakApp.CustomControls"
+    BackgroundImageSource="bg"
+    NavigationPage.HasNavigationBar="False"
+    x:Class="IdraakApp.Views.Login">
     <ContentPage.Content>
         <StackLayout Padding="10,25">
             <Grid 
@@ -50,6 +52,8 @@
                 </StackLayout>
             </Grid>
             <StackLayout 
+                x:Name="MainContainer"
+                IsVisible="false"
                 Padding="30,0"
                 Spacing="100"
                 VerticalOptions="CenterAndExpand"
@@ -113,10 +117,10 @@
                             Color="Black"
                             WidthRequest="1"/>
                         <Label 
+                            x:Name="lbl_CountryCode"
                             VerticalTextAlignment="Center"
                             TextColor="Black"
-                            FontSize="Small"
-                            Text="+971"/>
+                            FontSize="Small"/>
                         <BoxView 
                             HeightRequest="10"
                             Color="Black"
@@ -136,13 +140,19 @@
                             ShowCharCount="False"
                             ContainerType="Outlined">
                             <Entry 
+                                x:Name="txt_PhoneNumber"
                                 PlaceholderColor="Gray"
                                 Keyboard="Numeric"
                                 VerticalTextAlignment="Center"
                                 VerticalOptions="FillAndExpand"
                                 HorizontalTextAlignment="Center"
                                 Placeholder="Enter your number"
-                                HorizontalOptions="FillAndExpand"/>
+                                HorizontalOptions="FillAndExpand">
+                                <Entry.Behaviors>
+                                    <behavior:MaskedBehavior
+                                        x:Name="MaskedBehavior"/>
+                                </Entry.Behaviors>
+                            </Entry>
                         </inputLayout:SfTextInputLayout>
                     </StackLayout>
                 </StackLayout>
@@ -157,6 +167,10 @@
                     BackgroundColor="Goldenrod"
                     Text="NEXT"/>
             </StackLayout>
+            <ActivityIndicator 
+                x:Name="ActivityIndicator"
+                Color="Green"
+                VerticalOptions="Center"/>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

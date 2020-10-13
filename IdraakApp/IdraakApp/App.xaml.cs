@@ -10,7 +10,7 @@ namespace IdraakApp
     {
         public App()
         {
-            SyncfusionLicenseProvider.RegisterLicense("MzExMjM0QDMxMzgyZTMyMmUzMGJNZUF1RytQcUFUbFJuWEhoMWlLWi96eTh5U25IVEpuRVJWMWNtbGozU0E9");
+            SyncfusionLicenseProvider.RegisterLicense("MzMzNDM4QDMxMzgyZTMzMmUzMFQxMHhYVm5ZNnJpbGVwcVgrVDArYlVHU3ZHNnRxdjVZbWZUdHlvMFM0aW89");
             InitializeComponent();
 
             MainPage = new NavigationPage(new Login());
