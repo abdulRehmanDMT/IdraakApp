@@ -4,56 +4,74 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     xmlns:inputLayout="clr-namespace:Syncfusion.XForms.TextInputLayout;assembly=Syncfusion.Core.XForms"
     xmlns:behavior="clr-namespace:IdraakApp.CustomControls"
+    xmlns:Resource="clr-namespace:IdraakApp.Resources.MultiLanguage"
     BackgroundImageSource="splashbg"
-    NavigationPage.HasNavigationBar="True"
+    NavigationPage.HasNavigationBar="False"
     NavigationPage.HasBackButton="False"
     x:Class="IdraakApp.Views.Login">
-    <NavigationPage.TitleView>
-        <OnPlatform x:TypeArguments="View">
-            <On Platform="Android">
-                <StackLayout Orientation="Horizontal">
-                    <StackLayout 
-                        HorizontalOptions="StartAndExpand"
-                        VerticalOptions="CenterAndExpand"
-                        Orientation="Horizontal">
-                        <Image 
-                            VerticalOptions="Center"
-                            HeightRequest="30"
-                            Aspect="AspectFit"
-                            HorizontalOptions="Start"
-                            Source="logout.png"/>
-                    </StackLayout>
-                    <StackLayout 
-                        Margin="0,0,10,0"
-                        Spacing="10"
-                        VerticalOptions="CenterAndExpand"
-                        HorizontalOptions="EndAndExpand"
-                        Orientation="Horizontal">
-                        <Image 
-                            HeightRequest="30"
-                            Aspect="AspectFit"
-                            HorizontalOptions="EndAndExpand"
-                            Source="share.png"/>
-                        <Image 
-                            HeightRequest="30"
-                            Aspect="AspectFit"
-                            HorizontalOptions="End"
-                            Source="lang.png"/>
-                    </StackLayout>
-                </StackLayout>
-            </On>
-        </OnPlatform>
-    </NavigationPage.TitleView>
     <ContentPage.Content>
-        <StackLayout Padding="10">
+        <StackLayout Padding="10,35">
+            <StackLayout
+                HorizontalOptions="FillAndExpand"
+                Orientation="Horizontal">
+                <StackLayout
+                    Margin="5,0,0,0"
+                    Orientation="Horizontal"
+                    VerticalOptions="StartAndExpand"
+                    HorizontalOptions="StartAndExpand">
+                    <Image 
+                        VerticalOptions="Center"
+                        HeightRequest="30"
+                        Aspect="AspectFit"
+                        HorizontalOptions="StartAndExpand"
+                        Source="logout.png"/>
+                    <Image 
+                        VerticalOptions="Center"
+                        HeightRequest="30"
+                        Aspect="AspectFit"
+                        HorizontalOptions="Start"
+                        Source="Backarrow.png"/>
+                </StackLayout>
+                <StackLayout
+                    Orientation="Vertical"
+                    HorizontalOptions="CenterAndExpand">
+                    <Image 
+                        Margin="0,-10,0,0"
+                        Aspect="AspectFit"
+                        VerticalOptions="CenterAndExpand"
+                        HorizontalOptions="CenterAndExpand"
+                        Source="logo"/>
+                </StackLayout>
+                <StackLayout
+                    Margin="0,0,5,0"
+                    Orientation="Horizontal"
+                    VerticalOptions="StartAndExpand"
+                    HorizontalOptions="EndAndExpand">
+                    <Image 
+                        VerticalOptions="Center"
+                        HeightRequest="30"
+                        Aspect="AspectFit"
+                        HorizontalOptions="EndAndExpand"
+                        Source="share.png"/>
+                    <ImageButton
+                        BackgroundColor="Transparent"
+                        VerticalOptions="Center"
+                        HeightRequest="30"
+                        Aspect="AspectFit"
+                        Clicked="Btn_Language"
+                        HorizontalOptions="End"
+                        Source="lang.png"/>
+                </StackLayout>
+            </StackLayout>
             <Image 
-                Aspect="AspectFit"
-                HeightRequest="80"
-                HorizontalOptions="CenterAndExpand"
-                Source="logo"/>
+                Aspect="Fill"
+                Margin="0,-50,0,0"
+                VerticalOptions="CenterAndExpand"
+                HorizontalOptions="FillAndExpand"
+                Source="greybg"/>
             <StackLayout 
                 x:Name="MainContainer"
-                IsVisible="false"
+                IsVisible="true"
                 Padding="30,0"
                 Spacing="100"
                 VerticalOptions="CenterAndExpand"
@@ -103,7 +121,7 @@
                     <Label 
                         TextColor="LightGray"
                         FontFamily="CairoRegular"
-                        Text="Enter mobile number and login"/>
+                        Text="{x:Static Resource:AppResources.MobileNumberLogin}"/>
                     <StackLayout 
                         Orientation="Horizontal"
                         BackgroundColor="White"
@@ -131,7 +149,7 @@
                                 VerticalTextAlignment="Center"
                                 VerticalOptions="FillAndExpand"
                                 HorizontalTextAlignment="Center"
-                                Placeholder="Enter your number"
+                                Placeholder="{x:Static Resource:AppResources.EnterNumber}"
                                 HorizontalOptions="FillAndExpand">
                                 <Entry.Behaviors>
                                     <behavior:MaskedBehavior
@@ -150,7 +168,7 @@
                     Visual="Material"
                     Clicked="Sign_Clicked"
                     BackgroundColor="Goldenrod"
-                    Text="NEXT"/>
+                    Text="{x:Static Resource:AppResources.Next}"/>
             </StackLayout>
             <ActivityIndicator 
                 x:Name="ActivityIndicator"

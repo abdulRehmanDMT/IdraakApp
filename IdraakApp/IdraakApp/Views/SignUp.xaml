@@ -2,9 +2,11 @@
 <ContentPage 
     xmlns="http://xamarin.com/schemas/2014/forms"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+    xmlns:Resource="clr-namespace:IdraakApp.Resources.MultiLanguage"
     xmlns:inputLayout="clr-namespace:Syncfusion.XForms.TextInputLayout;assembly=Syncfusion.Core.XForms"
-    BackgroundImageSource="bg"
+    BackgroundImageSource="splashbg"
     NavigationPage.HasNavigationBar="False"
+    NavigationPage.HasBackButton="False"
     x:Class="IdraakApp.Views.SignUp">
     <NavigationPage.TitleView>
         <OnPlatform x:TypeArguments="View">
@@ -32,7 +34,9 @@
                             Aspect="AspectFit"
                             HorizontalOptions="EndAndExpand"
                             Source="share.png"/>
-                        <Image 
+                        <ImageButton
+                            BackgroundColor="Transparent"
+                            Clicked="Btn_Language"
                             HeightRequest="30"
                             Aspect="AspectFit"
                             HorizontalOptions="End"
@@ -43,50 +47,65 @@
         </OnPlatform>
     </NavigationPage.TitleView>
     <ContentPage.Content>
-        <StackLayout Padding="10,25">
-            <!--<Grid 
-                HorizontalOptions="FillAndExpand">
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="20*"/>
-                    <ColumnDefinition Width="60*"/>
-                    <ColumnDefinition Width="20*"/>
-                </Grid.ColumnDefinitions>
-                <StackLayout 
-                    Grid.Column="0"
-                    VerticalOptions="CenterAndExpand"
-                    Orientation="Horizontal">
+        <StackLayout Padding="10,35">
+            <StackLayout
+                HorizontalOptions="FillAndExpand"
+                Orientation="Horizontal">
+                <StackLayout
+                    Margin="5,0,0,0"
+                    Orientation="Horizontal"
+                    VerticalOptions="StartAndExpand"
+                    HorizontalOptions="StartAndExpand">
+                    <Image 
+                        VerticalOptions="Center"
+                        HeightRequest="30"
+                        Aspect="AspectFit"
+                        HorizontalOptions="StartAndExpand"
+                        Source="logout.png"/>
                     <Image 
                         VerticalOptions="Center"
                         HeightRequest="30"
                         Aspect="AspectFit"
                         HorizontalOptions="Start"
-                        Source="logout.png"/>
+                        Source="Backarrow.png"/>
                 </StackLayout>
-                <Image 
-                    Grid.Column="1"
-                    Aspect="AspectFit"
-                    HeightRequest="80"
-                    VerticalOptions="FillAndExpand"
-                    HorizontalOptions="FillAndExpand"
-                    Source="logo"/>
-                <StackLayout 
-                    Grid.Column="2"
-                    Spacing="10"
-                    VerticalOptions="CenterAndExpand"
-                    HorizontalOptions="FillAndExpand"
-                    Orientation="Horizontal">
+                <StackLayout
+                    Orientation="Vertical"
+                    HorizontalOptions="CenterAndExpand">
                     <Image 
+                        Margin="0,-10,0,0"
+                        Aspect="AspectFit"
+                        VerticalOptions="CenterAndExpand"
+                        HorizontalOptions="CenterAndExpand"
+                        Source="logo"/>
+                </StackLayout>
+                <StackLayout
+                    Margin="0,0,5,0"
+                    Orientation="Horizontal"
+                    VerticalOptions="StartAndExpand"
+                    HorizontalOptions="EndAndExpand">
+                    <Image 
+                        VerticalOptions="Center"
                         HeightRequest="30"
                         Aspect="AspectFit"
                         HorizontalOptions="EndAndExpand"
                         Source="share.png"/>
-                    <Image 
+                    <ImageButton
+                        BackgroundColor="Transparent"
+                        VerticalOptions="Center"
                         HeightRequest="30"
                         Aspect="AspectFit"
+                        Clicked="Btn_Language"
                         HorizontalOptions="End"
                         Source="lang.png"/>
                 </StackLayout>
-            </Grid>-->
+            </StackLayout>
+            <Image 
+                Aspect="Fill"
+                Margin="0,-50,0,0"
+                VerticalOptions="CenterAndExpand"
+                HorizontalOptions="FillAndExpand"
+                Source="greybg"/>
             <StackLayout 
                 Padding="30,0"
                 Spacing="20"
@@ -100,38 +119,18 @@
                         HorizontalTextAlignment="Center"
                         FontAttributes="Bold"
                         FontSize="Title"
-                        Text="أدخل التفاصيل"/>
+                        Text="{x:Static Resource:AppResources.EnterDetails}"/>
                     <Label 
                         FontSize="Subtitle"
                         HorizontalTextAlignment="Center"
                         TextColor="LightGray"
-                        Text="أعط رقم هاتفك المحمول وكلمة المرور."/>
+                        Text="{x:Static Resource:AppResources.MobileNumberPassword}"/>
                 </StackLayout>
                 <StackLayout 
                     Orientation="Horizontal"
                     BackgroundColor="White"
                     Spacing="10"
                     Padding="10">
-                    <!--<Frame 
-                        Padding="15"
-                        VerticalOptions="Center"
-                        HorizontalOptions="Center"
-                        BackgroundColor="Black"
-                        CornerRadius="300"
-                        HasShadow="False"/>
-                    <BoxView 
-                        HeightRequest="10"
-                        Color="Black"
-                        WidthRequest="1"/>
-                    <Label 
-                        VerticalTextAlignment="Center"
-                        TextColor="Black"
-                        FontSize="Small"
-                        Text="+971"/>
-                    <BoxView 
-                        HeightRequest="10"
-                        Color="Black"
-                        WidthRequest="1"/>-->
                     <inputLayout:SfTextInputLayout
                         ContainerBackgroundColor="White"
                         IsHintAlwaysFloated="False"
@@ -152,7 +151,7 @@
                             VerticalTextAlignment="Center"
                             VerticalOptions="FillAndExpand"
                             HorizontalTextAlignment="Center"
-                            Placeholder="أدخل رقمك"
+                            Placeholder="{x:Static Resource:AppResources.EnterNumber}"
                             HorizontalOptions="FillAndExpand"/>
                     </inputLayout:SfTextInputLayout>
                 </StackLayout>
@@ -191,7 +190,7 @@
                             VerticalTextAlignment="Center"
                             VerticalOptions="FillAndExpand"
                             HorizontalTextAlignment="Center"
-                            Placeholder="كلمه السر"
+                            Placeholder="{x:Static Resource:AppResources.Password}"
                             HorizontalOptions="FillAndExpand"/>
                     </inputLayout:SfTextInputLayout>
                 </StackLayout>
@@ -203,12 +202,12 @@
                         FontSize="Subtitle"
                         HorizontalTextAlignment="Center"
                         TextColor="LightGray"
-                        Text="سجل هنا"/>
+                        Text="{x:Static Resource:AppResources.Register}"/>
                     <Label 
                         FontSize="Subtitle"
                         HorizontalTextAlignment="Center"
                         TextColor="LightGray"
-                        Text="ليس لديك حساب؟ "/>
+                        Text="{x:Static Resource:AppResources.NoAccount}"/>
                 </StackLayout>
                 <Button 
                     Padding="0"
@@ -218,7 +217,7 @@
                     TextColor="Black"
                     Visual="Material"
                     BackgroundColor="Goldenrod"
-                    Text="تسجيل الدخول"/>
+                    Text="{x:Static Resource:AppResources.SignIn}"/>
                 <StackLayout
                     Spacing="15"
                     HorizontalOptions="CenterAndExpand"
@@ -227,12 +226,12 @@
                         FontSize="Subtitle"
                         HorizontalTextAlignment="Center"
                         TextColor="Goldenrod"
-                        Text="سجل هنا"/>
+                        Text="{x:Static Resource:AppResources.Register}"/>
                     <Label 
                         FontSize="Subtitle"
                         HorizontalTextAlignment="Center"
                         TextColor="LightGray"
-                        Text="ليس لديك حساب؟ "/>
+                        Text="{x:Static Resource:AppResources.NoAccount}"/>
                 </StackLayout>
             </StackLayout>
         </StackLayout>
