@@ -124,7 +124,7 @@ namespace IdraakApp.Resources.MultiLanguage {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to We have sent OTP code to very your number.
+        ///   Looks up a localized string similar to We have sent OTP code to verify your number.
         /// </summary>
         internal static string OtpSent {
             get {
@@ -160,7 +160,7 @@ namespace IdraakApp.Resources.MultiLanguage {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to sign in.
+        ///   Looks up a localized string similar to Sign In.
         /// </summary>
         internal static string SignIn {
             get {

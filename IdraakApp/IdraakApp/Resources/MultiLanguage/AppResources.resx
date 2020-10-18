@@ -139,7 +139,7 @@
     <value>Don't have an account?</value>
   </data>
   <data name="OtpSent" xml:space="preserve">
-    <value>We have sent OTP code to very your number</value>
+    <value>We have sent OTP code to verify your number</value>
   </data>
   <data name="Password" xml:space="preserve">
     <value>Password</value>
@@ -151,6 +151,6 @@
     <value>Select Language</value>
   </data>
   <data name="SignIn" xml:space="preserve">
-    <value>sign in</value>
+    <value>Sign In</value>
   </data>
 </root>

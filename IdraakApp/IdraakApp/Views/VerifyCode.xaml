@@ -11,114 +11,112 @@
     <ContentPage.Content>
         <StackLayout Padding="10,35">
             <StackLayout
-                HorizontalOptions="FillAndExpand"
-                Orientation="Horizontal">
+                Orientation="Vertical">
                 <StackLayout
-                    Margin="5,0,0,0"
-                    Orientation="Horizontal"
-                    VerticalOptions="StartAndExpand"
-                    HorizontalOptions="StartAndExpand">
-                    <Image 
-                        VerticalOptions="Center"
-                        HeightRequest="30"
-                        Aspect="AspectFit"
-                        HorizontalOptions="StartAndExpand"
-                        Source="logout.png"/>
-                    <Image 
-                        VerticalOptions="Center"
-                        HeightRequest="30"
-                        Aspect="AspectFit"
-                        HorizontalOptions="Start"
-                        Source="Backarrow.png"/>
-                </StackLayout>
-                <StackLayout
-                    Orientation="Vertical"
-                    HorizontalOptions="CenterAndExpand">
-                    <Image 
-                        Margin="0,-10,0,0"
-                        Aspect="AspectFit"
+                    HorizontalOptions="FillAndExpand"
+                    Orientation="Horizontal">
+                    <StackLayout
+                        Margin="5,0,0,0"
+                        Spacing="20"
+                        Orientation="Horizontal"
+                        VerticalOptions="StartAndExpand"
+                        HorizontalOptions="StartAndExpand">
+                        <Image 
+                            VerticalOptions="Center"
+                            HeightRequest="30"
+                            Aspect="AspectFit"
+                            HorizontalOptions="StartAndExpand"
+                            Source="logout.png"/>
+                        <Image 
+                            VerticalOptions="Center"
+                            HeightRequest="30"
+                            Aspect="AspectFit"
+                            HorizontalOptions="Start"
+                            Source="Backarrow.png"/>
+                    </StackLayout>
+                    <StackLayout
+                        Orientation="Vertical"
                         VerticalOptions="CenterAndExpand"
-                        HorizontalOptions="CenterAndExpand"
-                        Source="logo"/>
+                        HorizontalOptions="CenterAndExpand">
+                        <Image 
+                            Margin="0,-10,0,0"
+                            Aspect="AspectFit"
+                            VerticalOptions="CenterAndExpand"
+                            HorizontalOptions="CenterAndExpand"
+                            Source="logo"/>
+                    </StackLayout>
+                    <StackLayout
+                        Margin="0,0,5,0"
+                        Spacing="20"
+                        Orientation="Horizontal"
+                        VerticalOptions="StartAndExpand"
+                        HorizontalOptions="EndAndExpand">
+                        <Image 
+                            VerticalOptions="Center"
+                            HeightRequest="30"
+                            Aspect="AspectFit"
+                            HorizontalOptions="EndAndExpand"
+                            Source="share.png"/>
+                        <ImageButton
+                            x:Name="engBadge"
+                            BackgroundColor="Transparent"
+                            VerticalOptions="Center"
+                            HeightRequest="30"
+                            Aspect="AspectFit"
+                            Clicked="Btn_Language"
+                            HorizontalOptions="End"
+                            Source="lang.png"/>
+                    </StackLayout>
                 </StackLayout>
-                <StackLayout
-                    Margin="0,0,5,0"
-                    Orientation="Horizontal"
-                    VerticalOptions="StartAndExpand"
-                    HorizontalOptions="EndAndExpand">
-                    <Image 
-                        VerticalOptions="Center"
-                        HeightRequest="30"
-                        Aspect="AspectFit"
-                        HorizontalOptions="EndAndExpand"
-                        Source="share.png"/>
-                    <ImageButton
-                        BackgroundColor="Transparent"
-                        VerticalOptions="Center"
-                        HeightRequest="30"
-                        Aspect="AspectFit"
-                        Clicked="Btn_Language"
-                        HorizontalOptions="End"
-                        Source="lang.png"/>
-                </StackLayout>
+                <Image 
+                    Aspect="Fill"
+                    Margin="0,-50,0,0"
+                    VerticalOptions="CenterAndExpand"
+                    HorizontalOptions="FillAndExpand"
+                    Source="greybg"/>
             </StackLayout>
-            <Image 
-                Aspect="Fill"
-                Margin="0,-50,0,0"
-                VerticalOptions="CenterAndExpand"
-                HorizontalOptions="FillAndExpand"
-                Source="greybg"/>
             <StackLayout 
                 Padding="30,0"
-                Spacing="100"
-                VerticalOptions="CenterAndExpand"
+                Spacing="20"
+                VerticalOptions="FillAndExpand"
                 HorizontalOptions="FillAndExpand">
                 <StackLayout 
+                    Margin="0,-20,0,40"
                     Spacing="10"
                     HorizontalOptions="CenterAndExpand"
                     Orientation="Horizontal">
-                    <Frame 
-                        Padding="10,4"
-                        BackgroundColor="White"
-                        CornerRadius="300"
-                        HasShadow="False">
-                        <Label 
-                            TextColor="Black"
-                            FontSize="Small"
-                            FontFamily="CairoRegular"
-                            FontAttributes="Bold"
-                            Text="1"/>
-                    </Frame>
-                    <Frame 
-                        Padding="10,4"
-                        BackgroundColor="Goldenrod"
-                        CornerRadius="300"
-                        HasShadow="False">
-                        <Label 
-                            TextColor="Black"
-                            FontAttributes="Bold"
-                            FontFamily="CairoRegular"
-                            FontSize="Small"
-                            Text="2"/>
-                    </Frame>
-                    <Frame 
-                        Padding="10,4"
-                        BackgroundColor="White"
-                        CornerRadius="300"
-                        HasShadow="False">
-                        <Label 
-                            FontAttributes="Bold"
-                            FontFamily="CairoRegular"
-                            TextColor="Black"
-                            FontSize="Small"
-                            Text="3"/>
-                    </Frame>
+                    <Grid>
+                        <Image
+                            Source="circle"/>
+                        <Image
+                            VerticalOptions="CenterAndExpand"
+                            HorizontalOptions="CenterAndExpand"
+                            Source="q1"/>
+                    </Grid>
+                    <Grid>
+                        <Image
+                            Source="selectedCircle"/>
+                        <Image
+                            VerticalOptions="CenterAndExpand"
+                            HorizontalOptions="CenterAndExpand"
+                            Source="q2"/>
+                    </Grid>
+                    <Grid>
+                        <Image
+                            Source="circle"/>
+                        <Image
+                            VerticalOptions="CenterAndExpand"
+                            HorizontalOptions="CenterAndExpand"
+                            Source="q3"/>
+                    </Grid>
                 </StackLayout>
-                <StackLayout>
+                <StackLayout
+                    Margin="0,30,0,40">
                     <Label 
-                        TextColor="LightGray"
-                        FontSize="Small"
-                        FontFamily="CairoRegular"
+                        TextColor="LightSlateGray"
+                        FontSize="14"
+                        HorizontalTextAlignment="Center"
+                        FontFamily="CairoSemiBold"
                         Text="{x:Static Resource:AppResources.OtpSent}"/>
                     <StackLayout 
                         x:Name="PinContainer"
@@ -129,6 +127,7 @@
                             HorizontalOptions="FillAndExpand"
                             ReserveSpaceForAssistiveLabels="False"
                             HasError="False"
+                            WidthRequest="30"
                             FocusedColor="White"
                             ContainerBackgroundColor="White"
                             ShowCharCount="False"
@@ -142,14 +141,16 @@
                                 PlaceholderColor="{DynamicResource SharpBlueColor}"
                                 MaxLength="1"
                                 TextColor="Black"
+                                VerticalTextAlignment="Center"
                                 HorizontalTextAlignment="Center"
-                                FontFamily="CairoRegular"/>
+                                FontFamily="CairoSemiBold"/>
                         </inputLayout:SfTextInputLayout>
                         <inputLayout:SfTextInputLayout 
                             HorizontalOptions="FillAndExpand"
                             ReserveSpaceForAssistiveLabels="False"
                             HasError="False"
                             FocusedColor="White"
+                            WidthRequest="30"
                             ContainerBackgroundColor="White"
                             ShowCharCount="False"
                             ContainerType="Outlined"
@@ -163,12 +164,13 @@
                                 MaxLength="1"
                                 TextColor="Black"
                                 HorizontalTextAlignment="Center"
-                                FontFamily="CairoRegular"/>
+                                FontFamily="CairoSemiBold"/>
                         </inputLayout:SfTextInputLayout>
                         <inputLayout:SfTextInputLayout 
                             HorizontalOptions="FillAndExpand"
                             ReserveSpaceForAssistiveLabels="False"
                             HasError="False"
+                            WidthRequest="30"
                             FocusedColor="White"
                             ContainerBackgroundColor="White"
                             ShowCharCount="False"
@@ -183,12 +185,13 @@
                                 MaxLength="1"
                                 TextColor="Black"
                                 HorizontalTextAlignment="Center"
-                                FontFamily="CairoRegular"/>
+                                FontFamily="CairoSemiBold"/>
                         </inputLayout:SfTextInputLayout>
                         <inputLayout:SfTextInputLayout 
                             HorizontalOptions="FillAndExpand"
                             ReserveSpaceForAssistiveLabels="False"
                             HasError="False"
+                            WidthRequest="30"
                             FocusedColor="White"
                             ContainerBackgroundColor="White"
                             ShowCharCount="False"
@@ -203,52 +206,26 @@
                                 MaxLength="1"
                                 TextColor="Black"
                                 HorizontalTextAlignment="Center"
-                                FontFamily="CairoRegular"/>
-                        </inputLayout:SfTextInputLayout>
-                    </StackLayout>
-                    <StackLayout 
-                        IsVisible="False"
-                        Orientation="Horizontal"
-                        BackgroundColor="White"
-                        Spacing="10"
-                        Padding="10">
-                        <inputLayout:SfTextInputLayout
-                            ContainerBackgroundColor="White"
-                            IsHintAlwaysFloated="False"
-                            ReserveSpaceForAssistiveLabels="False"
-                            OutlineCornerRadius="0"
-                            FocusedStrokeWidth="0"
-                            VerticalOptions="FillAndExpand"
-                            HorizontalOptions="FillAndExpand"
-                            InputViewPadding="10,2"
-                            HasError="False"
-                            UnfocusedColor="White"
-                            FocusedColor="White"
-                            ShowCharCount="False"
-                            ContainerType="Outlined">
-                            <Entry 
-                                PlaceholderColor="Gray"
-                                Keyboard="Numeric"
-                                VerticalTextAlignment="Center"
-                                VerticalOptions="FillAndExpand"
-                                HorizontalTextAlignment="Center"
-                                FontFamily="CairoRegular"
-                                Placeholder="{x:Static Resource:AppResources.EnterNumber}"
-                                HorizontalOptions="FillAndExpand"/>
+                                FontFamily="CairoSemiBold"/>
                         </inputLayout:SfTextInputLayout>
                     </StackLayout>
                 </StackLayout>
-                <Button 
-                    Padding="0"
-                    CornerRadius="0"
-                    FontSize="Medium"
-                    TextColor="Black"
-                    FontAttributes="Bold"
-                    Visual="Material"
-                    Clicked="Sign_Clicked"
-                    FontFamily="CairoRegular"
-                    BackgroundColor="Goldenrod"
-                    Text="{x:Static Resource:AppResources.Next}"/>
+                <Grid
+                    HorizontalOptions="FillAndExpand"
+                    VerticalOptions="FillAndExpand">
+                    <ImageButton
+                        Aspect="AspectFit"
+                        BackgroundColor="Transparent"
+                        Clicked="Sign_Clicked"
+                        Source="Orrangebuttonbackground"/>
+                    <Label
+                        VerticalOptions="CenterAndExpand"
+                        HorizontalOptions="CenterAndExpand"
+                        FontSize="Large"
+                        TextColor="Black"
+                        FontFamily="CairoSemiBold"
+                        Text="{x:Static Resource:AppResources.Next}"/>
+                </Grid> 
             </StackLayout>
         </StackLayout>
     </ContentPage.Content>
